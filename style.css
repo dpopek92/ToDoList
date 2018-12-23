@@ -1,7 +1,5 @@
 * {
-  /* border: 1px solid red */
   box-sizing: border-box;
-
 }
 
 body {
@@ -21,9 +19,9 @@ body {
   background-color: #ffffb3;
   box-shadow: 20px 0 40px #ffffb3;
   width: 25%;
+  height: 100vh;
 }
 
-/* ogarnij prawy panel, dokończ flexbox, padaka z wymiarem, padding górny, weź się do roboty kurwa */
 .todo-right {
   width: 75%;
   float: left;
@@ -32,6 +30,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  overflow-x: auto;
 }
 
 .todo-right::after {
@@ -70,6 +69,7 @@ body {
   border: 1px solid #b3b3b3;
   width: 250px;
   height: 200px;
+  margin-bottom: 10px;
 }
 
 .todo-task-bar {
@@ -90,4 +90,26 @@ body {
 
 .todo-task-text {
   padding: 5px;
+}
+
+/* RWD */
+
+@media screen and (max-width: 786px) {
+  .todo-left {
+    float: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .todo-right {
+    float: none;
+    display: block;
+    overflow: unset;
+    width: 100%;
+  }
+
+  .todo-task {
+    margin: 10px auto;
+    width: 90%;
+  }
 }
