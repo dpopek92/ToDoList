@@ -18,10 +18,11 @@
     const taskText = document.createElement('div');
     taskText.classList.add('todo-task-text');
 
-    //RemoveButton
-    taskBar.appendChild(taskRemoveBtn);
+  
     //Data
     taskBar.textContent = `${addZero(taskData.getDate())}-${addZero(taskData.getMonth())}-${addZero(taskData.getFullYear())}r. ${addZero(taskData.getHours())}:${addZero(taskData.getMinutes())}`;
+     //RemoveButton
+    taskBar.appendChild(taskRemoveBtn);
     //Zawartość
     taskText.textContent = text;
 
